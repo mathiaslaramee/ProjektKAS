@@ -57,9 +57,29 @@ public class Booking
 	}
 	
 	
-	public double totalConferenceCost(Hotel hotel, Trip trips, double konferenceAfgift)
+	public double totalConferenceCost(Hotel hotel, double conferenceCost, boolean companion)
 	{
-		return 0;
+		
+		if(companion == true)
+		{
+			return this.getCompanion().getTripPrice() + hotel.getTwoPersonPrice() + this.conference.getConferenceCost();	
+		}
+		
+		else if (this.speaker == true)
+		{
+			if(companion == true)
+			{
+				return hotel.getTwoPersonPrice();
+			}
+			
+			return hotel.getOnePersonPrice();
+		}
+		
+		else 
+		{
+			return hotel.getOnePersonPrice() + this.conference.getConferenceCost();
+		}
+		
 	}
 
 }
