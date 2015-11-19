@@ -11,12 +11,11 @@ public class Booking
 	private String ledsager;
 	private Conference conference;
 	private Participant participant;
-	private ArrayList<Udflugt> udflugt;
-	
+	private ArrayList<Trip> trips;
 	
 	
 	public Booking(boolean foredragsholder, LocalDate ankomstDato, LocalDate afrejseDato, String ledsager,
-			Conference conference, Participant participant, ArrayList<Udflugt> udflugt) 
+			Conference conference, Participant participant, ArrayList<Trip> trips) 
 	{
 		this.foredragsholder = foredragsholder;
 		this.ankomstDato = ankomstDato;
@@ -24,7 +23,7 @@ public class Booking
 		this.ledsager = ledsager;
 		this.conference = conference;
 		this.participant = participant;
-		this.udflugt = udflugt;
+		this.trips = trips;
 	}
 	public boolean isForedragsholder() {
 		return foredragsholder;
@@ -53,13 +52,14 @@ public class Booking
 	public Participant getParticipant() {
 		return participant;
 	}
-	public ArrayList<Udflugt> getUdflugt() {
-		return udflugt;
+	public ArrayList<Trip> getUdflugt() {
+		ArrayList<Trip> trips2 = new ArrayList<>();
+		return trips2;
 	}
 	
-	public double beregnTotalAfgift(Hotel hotel, Udflugt udflugt, double konferenceAfgift)
+	public double beregnTotalAfgift(Hotel hotel, Trip trips, double konferenceAfgift)
 	{
-		
+		return 0;
 	}
 
 }
