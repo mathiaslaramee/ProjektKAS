@@ -1,10 +1,12 @@
 package application;
 
 public class CompanyPerson extends Participant {
+	
+	private String companyName;
 
-	public CompanyPerson(String name, int age, String country, String city, int phonenumber) {
+	public CompanyPerson(String name, int age, String country, String city, int phonenumber, String companyName) {
 		super(name, age, country, city, phonenumber);
-		// TODO Auto-generated constructor stub
+		this.companyName = companyName;
 	}
 
 	

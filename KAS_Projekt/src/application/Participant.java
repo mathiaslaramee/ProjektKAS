@@ -10,8 +10,6 @@ public class Participant {
 	 private int phoneNumber;
 	 private Hotel hotel;
 	 
-	 private String asjsadhjsadjsdajksadkjsjak;
-	 
 	 public Participant(String name, int age, String country, String city, int phonenumber)
 	 {
 		 this.name = name;
