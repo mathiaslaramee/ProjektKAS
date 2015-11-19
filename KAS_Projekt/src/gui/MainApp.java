@@ -1,8 +1,6 @@
 package gui;
 
 import application.service.Service;
-import guifx.CompanyPane;
-import guifx.EmployeePane;
 //import application.service.Service;
 import javafx.application.Application;
 import javafx.scene.Scene;
