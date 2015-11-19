@@ -13,6 +13,8 @@ public class Booking
 	private Participant participant;
 	private ArrayList<Trip> trips;
 	private int fisk;
+	private String asdas;
+	private int fish;
 	
 	
 	public Booking(boolean speaker, LocalDate arrivalDate, LocalDate departureDate, String companion,
