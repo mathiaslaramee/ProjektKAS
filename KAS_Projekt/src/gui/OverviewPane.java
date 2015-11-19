@@ -19,6 +19,9 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
-public class HotelPane {
-	private TextField txfPris, txfLedsager, ;
+public class OverviewPane {
+	private TextField txfLecture, txfStartDato, txfSlutDato, txfAddresse;
+    private TextArea txaTrip, txaHotel;
+	private ListView<Konference> lvwKonference;
+	private ListView<Deltagere> lvwKonference;
 }
