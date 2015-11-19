@@ -12,7 +12,8 @@ public class Booking
 	private Conference conference;
 	private Participant participant;
 	private ArrayList<Trip> trips;
-	
+	private int fisk;
+	private int tå;
 	
 	public Booking(boolean speaker, LocalDate arrivalDate, LocalDate departureDate, String companion,
 			Conference conference, Participant participant, ArrayList<Trip> trips) 
@@ -42,7 +43,7 @@ public class Booking
 	public String getCompanion() {
 		return companion;
 	}
-	public void setLedsager(String companion) {
+	public void setCompanion(String companion) {
 		this.companion = companion;
 	}
 	public Conference getConference() {
