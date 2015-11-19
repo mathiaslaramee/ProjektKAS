@@ -10,6 +10,7 @@ public class Service
 	{
 		companions.addCompanion(companion);
 		
+		
 	}
 	
 
