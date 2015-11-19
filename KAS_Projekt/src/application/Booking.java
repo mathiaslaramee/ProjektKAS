@@ -15,6 +15,7 @@ public class Booking
 	private int fisk;
 	private String asdas;
 	private int fish;
+	private String asda;
 	
 	
 	public Booking(boolean speaker, LocalDate arrivalDate, LocalDate departureDate, String companion,
