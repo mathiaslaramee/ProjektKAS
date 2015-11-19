@@ -8,12 +8,12 @@ public class Booking
 	private boolean speaker;;
 	private LocalDate arrivalDate;
 	private LocalDate departureDate;
-	private String companion;
+	private Trip companion;
 	private Conference conference;
 	private Participant participant;
 	private ArrayList<Trip> trips;
 
-	public Booking(boolean speaker, LocalDate arrivalDate, LocalDate departureDate, String companion,
+	public Booking(boolean speaker, LocalDate arrivalDate, LocalDate departureDate, Trip companion,
 			Conference conference, Participant participant, ArrayList<Trip> trips) 
 	{
 		this.speaker = speaker;
@@ -38,10 +38,10 @@ public class Booking
 		return departureDate;
 	}
 
-	public String getCompanion() {
+	public Trip getCompanion() {
 		return companion;
 	}
-	public void setCompanion(String companion) {
+	public void setCompanion(Trip companion) {
 		this.companion = companion;
 	}
 	public Conference getConference() {
