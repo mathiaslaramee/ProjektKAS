@@ -8,19 +8,19 @@ public class Booking
 	private boolean foredragsholder;
 	private LocalDate ankomstDato;
 	private LocalDate afrejseDato;
-	private String ledsager;
+	private String companions;
 	private Conference conference;
 	private Participant participant;
 	private ArrayList<Trip> trips;
 	
 	
-	public Booking(boolean foredragsholder, LocalDate ankomstDato, LocalDate afrejseDato, String ledsager,
+	public Booking(boolean foredragsholder, LocalDate ankomstDato, LocalDate afrejseDato, String companion,
 			Conference conference, Participant participant, ArrayList<Trip> trips) 
 	{
 		this.foredragsholder = foredragsholder;
 		this.ankomstDato = ankomstDato;
 		this.afrejseDato = afrejseDato;
-		this.ledsager = ledsager;
+		this.companions = companion;
 		this.conference = conference;
 		this.participant = participant;
 		this.trips = trips;
@@ -39,11 +39,11 @@ public class Booking
 		return afrejseDato;
 	}
 
-	public String getLedsager() {
-		return ledsager;
+	public String getCompanion() {
+		return companions;
 	}
-	public void setLedsager(String ledsager) {
-		this.ledsager = ledsager;
+	public void setCompanion(String ledsager) {
+		this.companions = ledsager;
 	}
 	public Conference getConference() {
 		return conference;
