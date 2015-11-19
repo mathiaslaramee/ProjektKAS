@@ -12,7 +12,7 @@ public class Booking
 	private Conference conference;
 	private Participant participant;
 	private ArrayList<Trip> trips;
-	private String asda;
+	private String asdas;
 	
 	
 	public Booking(boolean speaker, LocalDate arrivalDate, LocalDate departureDate, String companion,
