@@ -37,29 +37,30 @@ public class HotelPane extends GridPane{
 		this.add(lvwHotel, 0, 1, 1, 3);
 		lvwHotel.setPrefWidth(200);
 		lvwHotel.setPrefHeight(400);
-		lvwHotel.getItems().setAll(Service.getHotel());
+		//lvwHotel.getItems().setAll(Service.getHotel());
 
-		Label lblServiceYd = new Label("ServiceYdelser:");
-        this.add(lblServiceYd, 3, 3);
+		Label lblServiceYd = new Label("ServiceYdelser ");
+        this.add(lblServiceYd, 1, 0);
         
         txaServiceYd = new TextArea();
-        this.add(txaServiceYd, 3, 4);
+        this.add(txaServiceYd, 2, 0);
         txaServiceYd.setPrefWidth(200);
 		txaServiceYd.setPrefHeight(100);
 		txaServiceYd.setEditable(false);
         
-        Label lblDeltagere = new Label("Deltagere:");
-        this.add(lblDeltagere, 3, 5);
+        Label lblDeltagere = new Label("Deltagere ");
+        this.add(lblDeltagere, 1, 1);
         
         txaDeltagere = new TextArea();
-        this.add(txaDeltagere, 3, 6);
+        this.add(txaDeltagere, 2, 1);
         txaDeltagere.setPrefWidth(200);
 		txaDeltagere.setPrefHeight(100);
 		txaDeltagere.setEditable(false);
         
 		HBox hBoxButtons = new HBox(20);
-		this.add(hBoxButtons, 0, 6, 2, 1);
-
+		this.add(hBoxButtons, 1, 6, 2, 1);
+		hBoxButtons.setAlignment(Pos.CENTER);
+		
 		Button btnAddHotel = new Button("Add Hotel");
 		hBoxButtons.getChildren().add(btnAddHotel);
 		btnAddHotel.setOnAction(event -> this.addHotel());
@@ -80,6 +81,10 @@ public class HotelPane extends GridPane{
 	private void update(){
 
 	}
-
+	
+	//------------------------------------------
+	public void updateControls(){
+		
+	}
 
 }

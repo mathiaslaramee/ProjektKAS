@@ -45,21 +45,28 @@ public class MainApp extends Application{
 
         KonferencePane konferencePane = new KonferencePane();
         tabKonference.setContent(konferencePane);
-//        tabKonference.setOnSelectionChanged(event -> konferencePane.updateControls());
+        tabKonference.setOnSelectionChanged(event -> konferencePane.updateControls());
 
-//        Tab tabDeltagere = new Tab("Participant");
-//        tabPane.getTabs().add(tabDeltagere);
-//
-//        ParticipantsPane participantsPane = new ParticipantsPane();
-//        tabKonference.setContent(participantsPane);
-//        tabKonference.setOnSelectionChanged(event -> participantsPane.updateControls());
-        
+        Tab tabBooking = new Tab("Booking");
+        tabPane.getTabs().add(tabBooking);
+
+        BookingPane bookingPane = new BookingPane();
+        tabBooking.setContent(bookingPane);
+        tabBooking.setOnSelectionChanged(event -> bookingPane.updateControls());
+
         Tab tabHotels = new Tab("Hotel");
         tabPane.getTabs().add(tabHotels);
 
         HotelPane hotelPane = new HotelPane();
         tabHotels.setContent(hotelPane);
-//        tabHotels.setOnSelectionChanged(event -> hotelPane.updateControls());
+        tabHotels.setOnSelectionChanged(event -> hotelPane.updateControls());
+        
+        Tab tabOverview = new Tab("Overview");
+        tabPane.getTabs().add(tabOverview);
+
+        OverviewPane overviewPane = new OverviewPane();
+        tabOverview.setContent(overviewPane);
+        tabOverview.setOnSelectionChanged(event -> overviewPane.updateControls());
    
     }
     

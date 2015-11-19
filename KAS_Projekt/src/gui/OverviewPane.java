@@ -37,9 +37,9 @@ public class OverviewPane extends GridPane{
         this.add(lvwConference, 0, 1, 1, 3);
         lvwConference.setPrefWidth(200);
         lvwConference.setPrefHeight(400);
-        lvwConference.getItems().setAll(Service.getKonference());
+        //lvwConference.getItems().setAll(Service.getKonference());
         
-        Label lblDeltagere = new Label("Hotel:");
+        Label lblDeltagere = new Label("Deltagere:");
         this.add(lblDeltagere, 1, 0);
         
         txaDeltagere = new TextArea();
@@ -50,4 +50,9 @@ public class OverviewPane extends GridPane{
         
 	}
 	
+	// ---------------------------------------------------
+	
+	public void updateControls(){
+		
+	}
 }
