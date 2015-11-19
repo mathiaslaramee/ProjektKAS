@@ -5,45 +5,45 @@ import java.util.ArrayList;
 
 public class Booking 
 {
-	private boolean foredragsholder;
-	private LocalDate ankomstDato;
-	private LocalDate afrejseDato;
-	private String ledsager;
+	private boolean speaker;;
+	private LocalDate arrivalDate;
+	private LocalDate departureDate;
+	private String companion;
 	private Conference conference;
 	private Participant participant;
 	private ArrayList<Trip> trips;
 	
 	
-	public Booking(boolean foredragsholder, LocalDate ankomstDato, LocalDate afrejseDato, String ledsager,
+	public Booking(boolean speaker, LocalDate arrivalDate, LocalDate departureDate, String companion,
 			Conference conference, Participant participant, ArrayList<Trip> trips) 
 	{
-		this.foredragsholder = foredragsholder;
-		this.ankomstDato = ankomstDato;
-		this.afrejseDato = afrejseDato;
-		this.ledsager = ledsager;
+		this.speaker = speaker;
+		this.arrivalDate = arrivalDate;
+		this.departureDate = departureDate;
+		this.companion = companion;
 		this.conference = conference;
 		this.participant = participant;
 		this.trips = trips;
 	}
-	public boolean isForedragsholder() {
-		return foredragsholder;
+	public boolean isSpeaker() {
+		return speaker;
 	}
-	public void setForedragsholder(boolean foredragsholder) {
-		this.foredragsholder = foredragsholder;
+	public void setSpeaker(boolean speaker) {
+		this.speaker = speaker;
 	}
-	public LocalDate getAnkomstDato() {
-		return ankomstDato;
-	}
-
-	public LocalDate getAfrejseDato() {
-		return afrejseDato;
+	public LocalDate getArrivalDate() {
+		return arrivalDate;
 	}
 
-	public String getLedsager() {
-		return ledsager;
+	public LocalDate getDepartureDate() {
+		return departureDate;
 	}
-	public void setLedsager(String ledsager) {
-		this.ledsager = ledsager;
+
+	public String getCompanion() {
+		return companion;
+	}
+	public void setLedsager(String companion) {
+		this.companion = companion;
 	}
 	public Conference getConference() {
 		return conference;
@@ -52,12 +52,13 @@ public class Booking
 	public Participant getParticipant() {
 		return participant;
 	}
-	public ArrayList<Trip> getUdflugt() {
+	public ArrayList<Trip> getTrip() {
 		ArrayList<Trip> trips2 = new ArrayList<>(trips);
 		return trips2;
 	}
 	
-	public double beregnTotalAfgift(Hotel hotel, Trip trips, double konferenceAfgift)
+	
+	public double totalConferenceCost(Hotel hotel, Trip trips, double konferenceAfgift)
 	{
 		return 0;
 	}
