@@ -53,7 +53,7 @@ public class Booking
 		return participant;
 	}
 	public ArrayList<Trip> getUdflugt() {
-		ArrayList<Trip> trips2 = new ArrayList<>();
+		ArrayList<Trip> trips2 = new ArrayList<>(trips);
 		return trips2;
 	}
 	

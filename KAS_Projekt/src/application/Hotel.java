@@ -41,6 +41,11 @@ public class Hotel {
 		participants.remove(participant);
 	}
 	
+	public ArrayList<Participant> getParticipants()
+	{
+		return new ArrayList<Participant>(participants);
+	}
+	
 	public void addService(ExtraService extraService)
 	{
 		extraServices.add(extraService);
@@ -53,7 +58,7 @@ public class Hotel {
 	
 	public ArrayList<ExtraService> getServices()
 	{
-		ArrayList<ExtraService> services2 = new ArrayList<>();
+		ArrayList<ExtraService> services2 = new ArrayList<>(extraServices);
 		return services2;
 	}
 
