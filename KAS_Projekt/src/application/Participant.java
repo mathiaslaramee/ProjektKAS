@@ -2,15 +2,12 @@ package application;
 
 public class Participant {
 
-	
 	 private String name;
 	 private int age;
 	 private String city;
 	 private String country;
 	 private int phoneNumber;
 	 private Hotel hotel;
-	 
-	 private String asjsadhjsadjsdajksadkjsjak;
 	 
 	 public Participant(String name, int age, String country, String city, int phonenumber)
 	 {
