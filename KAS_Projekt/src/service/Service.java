@@ -15,7 +15,7 @@ public class Service
 	public static void deleteCompanionFromTrip(Trip trip, Booking companion)
 	{
 		trip.removeCompanion(companion);
-		companion.setCompanion(null);
+		companion.setCompanio(null);
 	}
 	
 
