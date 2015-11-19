@@ -1,5 +1,6 @@
 package gui;
 
+import application.Conference;
 import javafx.geometry.Insets;
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
@@ -22,7 +23,7 @@ import javafx.stage.Stage;
 public class KonferencePane extends GridPane{
 	private TextField txfLecture, txfStartDato, txfSlutDato, txfAddresse;
     private TextArea txaTrip, txaHotel;
-    private ListView<Konference> lvwKonference;
+    private ListView<Conference> lvwConference;
 	
 	public KonferencePane(){
 		this.setPadding(new Insets(20));
@@ -33,11 +34,11 @@ public class KonferencePane extends GridPane{
 		Label lblComp = new Label("Konference");
         this.add(lblComp, 0, 0);
 		
-//        lvwKonference = new ListView<>();
-//        this.add(lvwKonference, 0, 1, 1, 3);
-//        lvwKonference.setPrefWidth(200);
-//        lvwKonference.setPrefHeight(400);
-//        lvwKonference.getItems().setAll(Service.getKonference());
+        lvwConference = new ListView<>();
+        this.add(lvwConference, 0, 1, 1, 3);
+        lvwConference.setPrefWidth(200);
+        lvwConference.setPrefHeight(400);
+        lvwConference.getItems().setAll(Service.getKonference());
 
         Label lblLecturer = new Label("Lecture");
         txfLecture = new TextField();
@@ -59,18 +60,25 @@ public class KonferencePane extends GridPane{
         this.add(lblSlutDato, 3, 2);
         txfSlutDato.setEditable(false);
         
-        Label lblHotel = new Label("Employees:");
+        Label lblHotel = new Label("Hotel:");
         this.add(lblHotel, 2, 3);
         
         txaHotel = new TextArea();
         this.add(txaHotel, 2, 4);
+        txaHotel.setPrefWidth(200);
+		txaHotel.setPrefHeight(100);
+		txaHotel.setEditable(false);
         
-        Label lblTrip = new Label("Employees:");
+        Label lblTrip = new Label("Trip:");
         this.add(lblTrip, 3, 3);
+        
         
         txaTrip = new TextArea();
         this.add(txaTrip, 3, 4);
-        
+        txaTrip.setPrefWidth(200);
+		txaTrip.setPrefHeight(100);
+		txaTrip.setEditable(false);
+		
         HBox hBoxButtons = new HBox(20);
         this.add(hBoxButtons, 0, 5, 2, 1);
               
@@ -82,9 +90,9 @@ public class KonferencePane extends GridPane{
         hBoxButtons.getChildren().add(btnUpdate);
         btnUpdate.setOnAction(event -> this.update());
         
-        Button btnAddHotel = new Button("Add Hotel");
-        hBoxButtons.getChildren().add(btnAddHotel);
-        btnAddHotel.setOnAction(event -> this.addHotel());
+        Button btnConnectHotel = new Button("Add Hotel");
+        hBoxButtons.getChildren().add(btnConnectHotel);
+        btnConnectHotel.setOnAction(event -> this.connectHotel());
 
         
 	}
@@ -95,11 +103,11 @@ public class KonferencePane extends GridPane{
 		
 	}
 
-	private void addupdate() {
+	private void update() {
 		
 	}
 
-	private void addHotel() {
+	private void connectHotel() {
 		
 	}
 }

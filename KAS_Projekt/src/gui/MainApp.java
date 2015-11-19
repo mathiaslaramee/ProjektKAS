@@ -1,7 +1,5 @@
 package gui;
 
-import application.service.Service;
-//import application.service.Service;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Tab;
@@ -41,27 +39,27 @@ public class MainApp extends Application{
 
     private void initTabPane(TabPane tabPane) {
         tabPane.setTabClosingPolicy(TabClosingPolicy.UNAVAILABLE);
-
+        
         Tab tabKonference = new Tab("Konference");
         tabPane.getTabs().add(tabKonference);
 
         KonferencePane konferencePane = new KonferencePane();
         tabKonference.setContent(konferencePane);
-        tabKonference.setOnSelectionChanged(event -> konferencePane.updateControls());
+//        tabKonference.setOnSelectionChanged(event -> konferencePane.updateControls());
 
-        Tab tabDeltagere = new Tab("Participant");
-        tabPane.getTabs().add(tabDeltagere);
-
-        ParticipantsPane participantsPane = new ParticipantsPane();
-        tabKonference.setContent(participantsPane);
-        tabKonference.setOnSelectionChanged(event -> participantsPane.updateControls());
+//        Tab tabDeltagere = new Tab("Participant");
+//        tabPane.getTabs().add(tabDeltagere);
+//
+//        ParticipantsPane participantsPane = new ParticipantsPane();
+//        tabKonference.setContent(participantsPane);
+//        tabKonference.setOnSelectionChanged(event -> participantsPane.updateControls());
         
         Tab tabHotels = new Tab("Hotel");
         tabPane.getTabs().add(tabHotels);
 
         HotelPane hotelPane = new HotelPane();
         tabHotels.setContent(hotelPane);
-        tabHotels.setOnSelectionChanged(event -> hotelPane.updateControls());
+//        tabHotels.setOnSelectionChanged(event -> hotelPane.updateControls());
    
     }
     
