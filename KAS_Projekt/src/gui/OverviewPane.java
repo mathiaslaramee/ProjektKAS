@@ -48,6 +48,7 @@ public class OverviewPane extends GridPane{
 		txaDeltagere.setPrefHeight(100);
 		txaDeltagere.setEditable(false);
         
+		
 	}
 	
 	// ---------------------------------------------------
