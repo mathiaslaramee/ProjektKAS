@@ -6,11 +6,16 @@ import application.Trip;
 public class Service 
 {
 	
-	public static void connectCompanionToTrip(Trip companions, String companion)
+	public static void connectCompanionToTrip(Trip trip, Booking companion)
 	{
-		companions.addCompanion(companion);
-		
-		
+		trip.addCompanion(companion);
+		companion.setCompanion(trip);
+	}
+	
+	public static void deleteCompanionFromTrip(Trip trip, Booking companion)
+	{
+		trip.removeCompanion(companion);
+		companion.setCompanio(null);
 	}
 	
 

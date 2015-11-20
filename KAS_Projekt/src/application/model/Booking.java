@@ -1,4 +1,4 @@
-package application;
+package application.model;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -27,6 +27,17 @@ public class Booking
 	public boolean isSpeaker() {
 		return speaker;
 	}
+	
+	public void addTrip(Trip trip)
+	{
+		trips.add(trip);
+	}
+	
+	public void removeTrip(Trip trip)
+	{
+		trips.remove(trip);
+	}
+	
 	public void setSpeaker(boolean speaker) {
 		this.speaker = speaker;
 	}
@@ -41,7 +52,7 @@ public class Booking
 	public Trip getCompanion() {
 		return companion;
 	}
-	public void setCompanion(Trip companion) {
+	public void setTrip(Trip companion) {
 		this.companion = companion;
 	}
 	public Conference getConference() {
@@ -50,6 +61,10 @@ public class Booking
 
 	public Participant getParticipant() {
 		return participant;
+	}
+	
+	public void setParticipant(Participant participant) {
+		this.participant = participant;
 	}
 	public ArrayList<Trip> getTrip() {
 		ArrayList<Trip> trips2 = new ArrayList<>(trips);
@@ -81,5 +96,6 @@ public class Booking
 		}
 		
 	}
+
 
 }
