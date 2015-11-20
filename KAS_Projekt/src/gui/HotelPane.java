@@ -1,7 +1,7 @@
 package gui;
 
 import javafx.geometry.Insets;
-import application.Hotel;
+import application.model.Hotel;
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.geometry.Insets;
