@@ -1,6 +1,6 @@
 package gui;
 
-import application.Conference;
+import application.model.Conference;
 import javafx.geometry.Insets;
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
