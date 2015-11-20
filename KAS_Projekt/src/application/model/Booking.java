@@ -27,6 +27,17 @@ public class Booking
 	public boolean isSpeaker() {
 		return speaker;
 	}
+	
+	public void addTrip(Trip trip)
+	{
+		trips.add(trip);
+	}
+	
+	public void removeTrip(Trip trip)
+	{
+		trips.remove(trip);
+	}
+	
 	public void setSpeaker(boolean speaker) {
 		this.speaker = speaker;
 	}
@@ -41,7 +52,7 @@ public class Booking
 	public Trip getCompanion() {
 		return companion;
 	}
-	public void setCompanion(Trip companion) {
+	public void setTrip(Trip companion) {
 		this.companion = companion;
 	}
 	public Conference getConference() {
@@ -51,15 +62,40 @@ public class Booking
 	public Participant getParticipant() {
 		return participant;
 	}
+	
+	public void setParticipant(Participant participant) {
+		this.participant = participant;
+	}
 	public ArrayList<Trip> getTrip() {
 		ArrayList<Trip> trips2 = new ArrayList<>(trips);
 		return trips2;
 	}
 	
 	
-	public double totalConferenceCost(Hotel hotel, Trip trips, double konferenceAfgift)
+	public double totalConferenceCost(Hotel hotel, double conferenceCost, boolean companion)
 	{
-		return 0;
+		
+		if(companion == true)
+		{
+			return this.getCompanion().getTripPrice() + hotel.getTwoPersonPrice() + this.conference.getConferenceCost();	
+		}
+		
+		else if (this.speaker == true)
+		{
+			if(companion == true)
+			{
+				return hotel.getTwoPersonPrice();
+			}
+			
+			return hotel.getOnePersonPrice();
+		}
+		
+		else 
+		{
+			return hotel.getOnePersonPrice() + this.conference.getConferenceCost();
+		}
+		
 	}
+
 
 }

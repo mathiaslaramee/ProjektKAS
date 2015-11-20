@@ -2,12 +2,12 @@ package storage;
 
 import java.util.ArrayList;
 
-import application.Booking;
-import application.Conference;
-import application.ExtraService;
-import application.Hotel;
-import application.Participant;
-import application.Trip;
+import application.model.Booking;
+import application.model.Conference;
+import application.model.ExtraService;
+import application.model.Hotel;
+import application.model.Participant;
+import application.model.Trip;
 
 public class Storage {
 	
