@@ -17,17 +17,17 @@ public class Service
 {
 	
 //------------------------------- Companion -------------------------------------
-	public static void connectCompanionToTrip(Trip trip, Booking companion)
+	public static void connectCompanionToTrip(Trip trip, Booking booking)
 	{
-		trip.addCompanion(companion);
-		companion.setTrip(trip);
+		trip.addBooking(booking);
+		booking.addTrip(trip);
 	} 
 
 	
-	public static void deleteCompanionFromTrip(Trip trip, Booking companion)
+	public static void deleteCompanionFromTrip(Trip trip, Booking booking)
 	{
-		trip.removeCompanion(companion);
-		companion.setTrip(null);
+		trip.removeCompanion(booking);
+		booking.setTrip(null);
 	}
 	
 //------------------------------- Participants -------------------------------------

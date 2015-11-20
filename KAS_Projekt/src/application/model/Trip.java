@@ -9,7 +9,7 @@ public class Trip
 	private String place;
 	private double tripPrice;
 	private LocalDate dateForTrip;
-	private ArrayList<Booking> companions;
+	private ArrayList<Booking> bookings;
 	
 	public Trip(String tripName, String place, double tripePrice, LocalDate dateForTrip,
 			ArrayList<Booking> companion) {
@@ -17,7 +17,7 @@ public class Trip
 		this.place = place;
 		this.tripPrice = tripePrice;
 		this.dateForTrip = dateForTrip;
-		this.companions = new ArrayList<>();
+		this.bookings = new ArrayList<>();
 	}
 	
 	public String getTripName() {
@@ -52,16 +52,16 @@ public class Trip
 		this.dateForTrip = dateForTrip;
 	}
 
-	public ArrayList<Booking> getCompanion() {
-		return new ArrayList<>(companions); 
+	public ArrayList<Booking> getBookings() {
+		return new ArrayList<Booking>(bookings); 
 	}
 	
-	public void addCompanion(Booking companion) {
-		companions.add(companion);
+	public void addBooking(Booking booking) {
+		bookings.add(booking);
 	}
 	
-	public void removeCompanion(Booking companion) {
-		companions.remove(companion);
+	public void removeBooking(Booking booking) {
+		bookings.remove(booking);
 	}
 	
 

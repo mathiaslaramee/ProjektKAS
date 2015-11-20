@@ -29,16 +29,6 @@ public class Booking
 		return speaker;
 	}
 	
-	public void addTrip(Trip trip)
-	{
-		trips.add(trip);
-	}
-	
-	public void removeTrip(Trip trip)
-	{
-		trips.remove(trip);
-	}
-	
 	public void setSpeaker(boolean speaker) {
 		this.speaker = speaker;
 	}
@@ -72,6 +62,15 @@ public class Booking
 		return trips2;
 	}
 	
+	public void addTrip(Trip trip)
+	{
+		trips.add(trip);
+	}
+	
+	public void removeTrip(Trip trip)
+	{
+		trips.remove(trip);
+	}
 	
 	public double totalConferenceCost(Hotel hotel, double conferenceCost, boolean companion)
 	{
