@@ -18,7 +18,7 @@ public class Conference {
 		this.address = address;
 	}
 	
-	public Booking createBooking(boolean speaker, LocalDate arrivalDate, LocalDate departureDate, Trip companion,
+	public Booking createBooking(boolean speaker, LocalDate arrivalDate, LocalDate departureDate, String companion,
 			Conference conference, Participant participant, ArrayList<Trip> trips)
 	{
 		Booking booking = new Booking(speaker, arrivalDate, departureDate, companion, conference, participant, trips);
